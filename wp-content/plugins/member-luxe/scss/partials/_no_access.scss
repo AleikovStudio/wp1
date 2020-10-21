@@ -1,0 +1,84 @@
+.ps_content {
+  &.mbl-no-access {
+    padding: 10px 20px;
+  }
+
+  .accordion-title {
+    color: #000000;
+    font-size: 21px;
+    line-height: normal;
+    margin: 15px 0;
+    padding: 0 0 0 15px;
+  }
+
+  [data-term-id] {
+    h3 {
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      color: #54626f;
+      cursor: pointer;
+      display: block;
+      font-size: 16px;
+      line-height: 1;
+      margin: 0;
+      padding: 15px 0 15px 15px;
+      position: relative;
+
+      &:after {
+        background: url(../images/arrows.jpg) no-repeat -18px 0;
+        content: "";
+        display: block;
+        height: 14px;
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        width: 11px;
+      }
+    }
+
+    .term-content {
+      border-bottom: 1px solid #d5d5d5;
+      border-top: 1px solid #d5d5d5;
+      display: none;
+      overflow: auto;
+      padding: 10px 15px;
+    }
+
+    &:last-child {
+      h3 {
+        border-bottom: none;
+      }
+      .term-content {
+        border-bottom: none;
+      }
+    }
+
+    &.active {
+      h3 {
+        border-bottom-color: transparent;
+        font-weight: bold;
+        position: relative;
+
+        &:after {
+          background: url(../images/i/arrows.jpg) no-repeat;
+          content: "";
+          display: block;
+          height: 11px;
+          position: absolute;
+          right: 10px;
+          width: 14px;
+        }
+      }
+    }
+  }
+
+  .term-content.evaluate {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  #no-access-content {
+    border-top: 1px solid #d8d8d8;
+  }
+}

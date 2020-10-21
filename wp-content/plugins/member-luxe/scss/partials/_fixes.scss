@@ -1,0 +1,10 @@
+.note-editor{
+    &.note-frame{
+        .note-editing-area{
+            .note-editable{
+                background-color: transparent;
+                border-radius: 3px;               
+            }
+        }
+    }
+}

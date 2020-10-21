@@ -1,0 +1,100 @@
+//--- buttons
+.mbr-btn{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1.6rem;
+
+
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+
+
+
+    //@include transition();
+    &:active,
+    &:focus{
+        outline: none!important;
+        box-shadow: none!important;
+    }
+    .iconmoon{
+        margin-left: 5px;
+    }
+
+    //---- sizes
+
+    &.btn-default{
+        padding: 15px;
+        font-size: 1.4rem;
+        text-align: center;
+        border: none;
+    }
+
+    &.btn-bordered{
+        background-color: transparent;
+        border: 1px solid transparent;
+        &.btn-gray{
+            color: #acacac;
+            border-color: #c1c1c1;
+            &:hover,
+            &:active,
+            &:focus{
+                border-color: #a7a7a7;
+                color: #858585;
+            }
+        }
+        &.btn-green{
+            border-color: #a0b0a1;
+            color: #a0b0a1;
+            &:hover{
+                background: #adbead;
+                color: #fff;
+            }
+            &:active,
+            &:focus{
+                background: #8e9f8f;
+                color: #fff;
+            }
+        }
+    }
+
+    &.btn-solid{
+        border: none;
+        &.btn-green{
+            background: #a0b0a1;
+            color: #fff;
+            &:hover{
+                background: #adbead;
+                color: #fff;
+            }
+            &:active,
+            &:focus{
+                background: #8e9f8f;
+                color: #fff;
+            }
+            &:disabled {
+                background: #c7cac7;
+                color: #fff;
+            }
+        }
+    }
+
+    &.btn-rounded{
+        border-radius: 3px;
+    }
+
+}

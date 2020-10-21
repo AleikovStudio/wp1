@@ -1,0 +1,110 @@
+@mixin transition($property: all 0.25s ease-out){
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+    -webkit-transform: translateZ(0);
+}
+
+@mixin transform-scale($scale:1.1, $duration:.35s){
+    -webkit-transform: scale($scale);
+    transform: scale($scale);
+    -webkit-transition: opacity $duration,-webkit-transform $duration;
+    transition: opacity $duration,transform $duration;
+}
+
+@mixin color-panel($background-color: #fff, $text-color: #323232) {
+    color: $text-color;
+    background-color: $background-color;
+}
+
+@mixin grayscale($grayscale:0) {
+    -webkit-filter: grayscale($grayscale);
+    filter: grayscale($grayscale);
+}
+
+//-------
+
+@mixin button-colored($background-color, $color){
+    background-color: $background-color;
+    color: $color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        background-color: darken($background-color, 10%);
+        color: $color;
+    }
+}
+
+
+//------------ grid system ---
+
+@mixin grid-float-fix($n:1){
+    &:nth-child( #{$n}n + #{$n+1}){
+        clear: left;
+    }
+}
+@mixin grid-float-fix-reset($n:1){
+    &:nth-child( #{$n}n + #{$n+1}){
+        clear: none;
+    }
+}
+//------------
+
+
+
+//--------------
+
+
+
+@mixin respond-to($brakpoint){
+    @if $brakpoint == xss {
+        @media ( max-width: 320px ){
+            @content ;
+        }
+    }
+    @else if $brakpoint == xsm {
+        @media ( min-width: 321px ) and ( max-width:  459px ) {
+            @content ;
+        }
+    }
+    @else if $brakpoint == xsl {
+        @media ( min-width: 460px ) and ( max-width:  767px ) {
+            @content ;
+        }
+    }
+    @else if $brakpoint == xs {
+        @media ( max-width:  767px ) {
+            @content ;
+        }
+    }
+    @else if $brakpoint == sm {
+        @media ( min-width: 768px ) and ( max-width:  991px ) {
+            @content ;
+        }
+    }
+    @else if $brakpoint == md {
+        @media ( min-width: 992px ) and ( max-width:  1199px ) {
+            @content ;
+        }
+    }
+
+    @else if $brakpoint == lg {
+        @media ( min-width: 1200px ){
+            @content ;
+        }
+    }
+    @else if $brakpoint == mlg {
+        @media ( min-width: 1200px ) and ( max-width:  1399px ){
+            @content ;
+        }
+    }
+
+    @else if $brakpoint == xlg {
+        @media ( min-width: 1400px ){
+            @content ;
+        }
+    }
+
+}

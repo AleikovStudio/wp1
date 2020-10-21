@@ -1,0 +1,228 @@
+.wpm-audio-block {
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wpm-audio-white.wpm-audio-block {
+    border: 1px solid #d3d9df;
+}
+
+.wpm-audio-black {
+    background-color: #000;
+}
+
+.wpm-audio-block {
+    box-sizing: border-box;
+    margin-bottom: 2em;
+}
+
+.wpm-audio-player wave {
+    z-index: 0;
+}
+
+.wpm-audio-player canvas {
+    max-width: none;
+}
+
+.wpm-audio-buttons_set {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    background-color: #333333;
+}
+
+.wpm-audio-white .wpm-audio-buttons_set {
+    background-color: #d3d9df;
+}
+
+.wpm-audio-block button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.wpm-audio-block button, .wpm-audio-time, .wpm-audio-duration {
+    font-family: Arial;
+    font-size: 1.1em;
+    margin: 0.2em;
+    padding: 5px 0 5px 20px;
+    border-width: 0;
+    outline: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+}
+
+.wpm-audio-time, .wpm-audio-duration {
+    min-width: 5.5em;
+}
+
+.wpm-audio-download a {
+    color: white;
+    text-decoration: none;
+}
+
+.wpm-audio-time, .wpm-audio-duration {
+    font-family: Arial;
+    /*background-color: #428bcb;*/
+}
+
+button.wpm-audio-active-button {
+    /*background-color: #FF4081;*/
+}
+
+button.wpm-audio-paused-button {
+    /*background-color: #FFB642;*/
+}
+
+.wpm-audio-buttons_set button:before, .wpm-audio-buttons_set div:before {
+    font-family: "wavesurfer", "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    width: 1em;
+}
+
+.wpm-audio-time:before, .wpm-audio-duration:before {
+    padding-right: 0.3em;
+}
+
+button.wpm-audio-play:before {
+    content: "\f04b";
+}
+
+button.wpm-audio-play.wpm-audio-active-button:before {
+    content: "\f04c";
+}
+
+button.wpm-audio-paused-button:before {
+    content: "\f04b";
+    padding-right: 0em;
+}
+
+button.wpm-audio-stop:before {
+    content: "\f04d";
+}
+
+div.wpm-audio-time:before {
+    content: "\f041";
+}
+
+div.wpm-audio-duration:before {
+    content: "\f017";
+}
+
+button.wpm-audio-download:before {
+    content: "\f019";
+}
+
+button.wpm-audio-loop:before {
+    content: "\f061";
+}
+
+button.wpm-audio-loop.wpm-audio-active-button:before {
+    content: "\f01e";
+}
+
+button.wpm-audio-mute:before {
+    content: "\f028";
+    padding-right: 4.5px;
+}
+
+button.wpm-audio-mute.wpm-audio-active-button:before {
+    content: "\f026\f00d";
+    padding-right: 0px;
+}
+
+.wpm-audio-time {
+    margin-left: Auto;
+}
+
+@media (max-width: 550px) {
+    .wpm-audio-duration {
+        display: none;
+    }
+
+    .wpm-audio-time {
+        display: none;
+    }
+
+    .wpm-audio-block button span, .wpm-audio-time span, .wpm-audio-duration span {
+        padding-left: 0.3em;
+        display: none;
+    }
+}
+
+.wpm-audio-block button span, .wpm-audio-time span, .wpm-audio-duration span {
+    padding-left: 0.3em;
+}
+
+.wpm-audio-block wave:hover {
+    cursor: pointer;
+}
+
+/* Playlist */
+
+.wpm-audio-list-group {
+    counter-reset: section;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.wpm-audio-list-group li:hover {
+    cursor: pointer;
+}
+
+.wpm-audio-active-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#waveform {
+    position: relative;
+}
+
+.wpm-audio-progress {
+    position: relative;
+    display: none;
+    /* since 2.2 */
+}
+
+.wpm-audio-loading[value] {
+    border: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
+    position: absolute;
+    z-index: 10;
+    margin-top: -80px;
+}
+
+.wpm-audio-marker:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.wpm-audio-marker-current {
+    background: #FFFF66;
+}
+/*
+.wpm-audio-block.wpm-audio-ws .wpm-audio-player > wave:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+}*/
+.wpm-audio-loader {
+    text-align: center;
+    margin-top: 42px;
+    position: absolute;
+    width: 100%;
+    color: #d3d9df;
+}

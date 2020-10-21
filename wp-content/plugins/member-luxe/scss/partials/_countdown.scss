@@ -1,0 +1,288 @@
+/* jQuery Countdown styles 2.0.0. */
+
+@mixin skin-colors-variations($skin){
+  @for $i from 1 through 8 {
+    &.c-color-#{$i}{
+      .digit,
+      .image-sep{
+        background-image: url('//static.wppage.ru/wppage/i/countdown/skins/#{$skin}/color-#{$i}/digits.png');
+      }
+    }
+
+  }
+}
+
+@mixin skin-digits-backgourn-offset($step) {
+  @for $i from 0 through 9 {
+    span.image-#{$i} {
+      background-position: $step*$i*1%;
+    }
+  }
+  span.image-sep {
+    background-position: $step*10%;
+  }
+}
+
+
+.countdown-wrap {
+  position: relative;
+  font-size: 0;
+  margin: 15px auto;
+  .c-image{
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 40;
+  }
+  .countdown-inner{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    .timer-background-image{
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 40;
+    }
+    .countdown{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 50;
+      .digits-wrap{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .digit,
+        .image-sep{
+          display: inline-block;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        @include skin-digits-backgourn-offset(10);
+      }
+    }
+  }
+  &.c-skin-7,
+  &.c-skin-8{
+    .countdown-inner{
+      .countdown{
+        .digits-wrap{
+          @include skin-digits-backgourn-offset(11.13);
+        }
+      }
+    }
+  }
+  &.c-size-small{
+    .countdown-inner{
+      max-width: 311px;
+    }
+  }
+  &.c-size-medium{
+    .countdown-inner{
+      max-width: 467px;
+    }
+  }
+}
+/*  skin 1   */
+
+.c-skin-1{
+  .countdown-inner{
+    max-width: 622px;
+  }
+  &.c-size-big{
+    .countdown{
+      max-width: 622px;
+    }
+  }
+  &.c-size-big{
+    .countdown{
+      max-width: 622px;
+    }
+  }
+  &.c-size-big{
+    .countdown{
+      max-width: 622px;
+    }
+  }
+  .countdown{
+    max-width: 622px;
+    padding: 5.1447% 8.6816% 10.2893%;
+  }
+  .digit,
+  .image-sep{
+    width: 8.3652%;
+    margin: 0 0.3215%;
+    padding: 0;
+  }
+  .image-sep{
+    width: 7.8%;
+    margin: 0 0.5215%;
+  }
+  @include skin-colors-variations(1);
+}
+
+/*  skin 2   */
+.c-skin-2{
+  .countdown-inner{
+    max-width: 624px;
+  }
+  .countdown{
+    max-width: 624px;
+    padding: 7.0512% 8.4935% 11.3782%;
+  }
+  .digit,
+  .image-sep{
+    width: 8.3284%;
+    margin: 0 0.3215%;
+    padding: 0;
+  }
+  @include skin-colors-variations(2);
+}
+
+/*  skin 3   */
+.c-skin-3{
+  .countdown-inner{
+    max-width: 622px;
+  }
+  .countdown{
+    max-width: 622px;
+    padding: 3.5369% 0 11.5755%;
+  }
+  .digit,
+  .image-sep{
+    width: 5.1446%;
+    margin: 0 0.8038%;
+    padding: 0;
+  }
+  .image-sep{
+    width: 4.9446%;
+    margin: 0 3.7369%;
+  }
+  @include skin-colors-variations(3);
+}
+
+/*  skin 4  */
+.c-skin-4{
+  .countdown-inner{
+    max-width: 620px;
+  }
+  .countdown{
+    max-width: 620px;
+    padding: 4.0322% 0 11.4516%;
+  }
+  .digit,
+  .image-sep{
+    width: 5.9677%;
+    margin: 0 0.4838%;
+    padding: 0;
+  }
+  .image-sep{
+    width: 5.9677%;
+    margin: 0 3.7096%;
+  }
+  @include skin-colors-variations(4);
+}
+
+/*  skin 5  */
+.c-skin-5{
+  .countdown-inner{
+    max-width: 629px;
+  }
+  .countdown{
+    max-width: 629px;
+    padding: 4.7694% 0 16.0572%;
+  }
+  .digit,
+  .image-sep{
+    width: 4.1335%;
+    margin: 0 0.1589%;
+    padding: 0;
+  }
+  .image-sep{
+    margin: 0 4.9284%;
+  }
+  @include skin-colors-variations(5);
+}
+
+/*  skin 6  */
+.c-skin-6{
+  .countdown-inner{
+    max-width: 620px;
+  }
+  .countdown{
+    max-width: 620px;
+    padding: 0 0 9.6774%;
+  }
+  .digit,
+  .image-sep{
+    width: 9.6774%;
+    margin: 0 0.6451%;
+    padding: 0;
+  }
+  .digit{
+    &:first-child{
+      margin-left: 0;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .image-sep{
+    margin: 0 -2.5806%;
+  }
+  @include skin-colors-variations(6);
+}
+
+/*  skin 7  */
+.c-skin-7{
+  .countdown-inner{
+    max-width: 507px;
+  }
+  .countdown{
+    max-width: 507px;
+    padding: 4.3392% 0 14.9901%;
+  }
+  .digit,
+  .image-sep{
+    width: 5.5226%;
+    margin: 0 0.3944%;
+    padding: 0;
+  }
+  .image-sep{
+    margin: 0 4.7337%;
+    background: none!important;
+  }
+  @include skin-colors-variations(7);
+}
+
+/*  skin 8  */
+.c-skin-8{
+  .countdown-inner{
+    max-width: 623px;
+  }
+  .countdown{
+    max-width: 623px;
+    padding: 6.5810% 0 2.5682%;
+  }
+  .digit,
+  .image-sep{
+    width: 4.4943%;
+    margin: 0 0.1605%;
+    padding: 0;
+  }
+  .image-sep{
+    margin: 0 6.4205%;
+    background: none!important;
+  }
+  @include skin-colors-variations(8);
+}

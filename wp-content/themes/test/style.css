@@ -1,0 +1,81 @@
+/*
+Theme Name: Vipozi
+Theme URI: https://aleikovstudio.com/
+Author: Aleikov Studio
+Author URI: https://aleikovstudio.com/
+Description: The greatest WP theme ever made!
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: opa, tema
+Text Domain: test
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.card {
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul.page-numbers {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    justify-content: center !important;
+}
+
+ul.page-numbers li:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+ul.page-numbers li:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+a.page-numbers,
+span.current {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+span.current {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: default;
+}
+
+span.dots {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    cursor: default;
+}
+
+nav.navigation {
+    width: 100%;
+}
+
+.wrapper {
+    margin: 20px 0;
+}

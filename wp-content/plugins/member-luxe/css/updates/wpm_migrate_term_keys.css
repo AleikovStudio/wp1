@@ -1,0 +1,69 @@
+#wpm_migrate_keys_holder{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    position: fixed;
+    z-index: 9999999;
+    display: none;
+}
+#wpm_migrate_keys_alert{
+    height: 400px;
+    width: 700px;
+    background: #d9edf7;
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    margin: -200px 0 0 -350px;
+    border: 1px solid #bce8f1;
+    padding: 15px;
+    left: 50%;
+    color: #31708f;
+}
+#wpm_migrate_keys_alert .inactive{
+
+}
+#wpm_migrate_keys_alert h1{
+    color: #31708f;
+    text-align: center;
+    margin-top: 85px;
+}
+#wpm_migrate_keys_alert .inactive button{
+    padding: 6px 12px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #2e6da4;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #337ab7;
+    display: block;
+    width: 300px;
+    margin: 90px auto 0;
+}
+#wpm_migrate_keys_alert .inactive button:hover,
+#wpm_migrate_keys_alert .inactive button:active {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+#wpm_migrate_keys_process{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 80px;
+}
+#wpm_migrate_keys_alert .active{
+    display: none;
+}

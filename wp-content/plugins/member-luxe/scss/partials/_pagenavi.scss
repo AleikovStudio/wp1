@@ -1,0 +1,111 @@
+//---
+.pagenavi-row{
+  margin: -20px 0 50px;
+  overflow: hidden;
+}
+.wp-pagenavi{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    color: #7e7e7e;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: right;
+    overflow: hidden;
+    @include respond-to('xs'){
+        text-align: center;
+    }
+    @include respond-to('sm'){
+        text-align: center;
+    }
+    .pages{
+        display: flex;
+        justify-content: space-between;
+        order: 2;
+        @include respond-to('xs'){
+            order: 1;
+            width: 100%;
+
+        }
+        a,
+        .current,
+        .extend{
+            display: block;
+        }
+    }
+
+    a,
+    .current,
+    .extend{
+        color: #7e7e7e;
+        display: block;
+        padding: 10px 12px;
+        margin: 0 3px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        @include respond-to('xs'){
+            margin: 0 3px 10px;
+        }
+
+    }
+    .page{
+        border-color: #c1c1c1;
+        background: #fbfbfb;
+        &:hover{
+            color: #000;
+            border-color: #c1c1c1;
+        }
+    }
+    .current{
+        background: #c1c1c1;
+        border-color: #c1c1c1;
+        color: #fff;
+    }
+    .separator{
+        margin: 0 5px;
+    }
+    .prevpostslink,
+    .nextpostslink{
+        @include respond-to('xs'){
+            width: calc(50% - 8px);
+            border-color: #c1c1c1;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        @include respond-to('sm'){
+            border-color: #c1c1c1;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+
+        span{
+            font-size: 1.1rem;
+        }
+        &:hover{
+            color: #000;
+        }
+    }
+    .prevpostslink{
+        order: 1;
+        @include respond-to('xs'){
+            order: 2;
+            margin: 0;
+        }
+        @include respond-to('sm'){
+            display: inline-block!important;
+        }
+    }
+    .nextpostslink{
+        order: 3;
+        @include respond-to('xs'){
+            order: 3;
+            margin: 0 3px 0 10px;
+        }
+        @include respond-to('sm'){
+            display: inline-block!important;
+        }
+    }
+
+
+}

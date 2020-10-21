@@ -1,0 +1,207 @@
+.profile-wrap{
+    margin: 40px auto;
+    max-width: 780px;
+    .profile-help-text{
+        margin-top: 45px;
+        @include respond-to('xs'){
+            margin-top: 20px;
+        }
+    }
+    .profile-avatar{
+        img{
+            max-width: 180px;
+            margin: 0 auto;
+            display: block;
+        }
+        @include respond-to('xs'){
+            margin-bottom: 20px;
+        }
+
+    }
+}
+.user-info{
+    margin: 30px 0 0;
+    .title{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 0 0 10px;
+        border-bottom: 2px solid #e9e9e9;
+    }
+    .info-row,
+    .pass-row{
+        display: flex;
+        display: -ms-flexbox;
+        padding: 10px 0;
+        border-bottom: 1px solid #e9e9e9;
+        vertical-align: middle;
+        @include transition;
+        @include respond-to('xs'){
+            flex-direction: column;
+            -ms-flex-direction: column;
+        }
+        &.active{
+            padding: 30px 0;
+        }
+        .info-label{
+            width: 140px;
+            padding: 5px 5px 5px 0;
+            color: #a3a3a3;
+            @include respond-to('xs'){
+                padding: 5px;
+            }
+        }
+        .info-value{
+            flex: 1;
+            -ms-flex: 1 0 auto;
+            padding: 5px;
+            margin-right: 20px;
+            border: 1px solid transparent;
+            outline: none;
+            &:disabled{
+                background: #fff;
+            }
+            &.active{
+                border-color: #d5d5d5;
+                @include respond-to('xs'){
+                    margin-bottom: 5px;
+                }
+            }
+            &.disabled{
+                color: #a3a3a3;
+            }
+            @include respond-to('xs'){
+                margin-right: 0;
+            }
+
+        }
+        .buttons{
+            white-space: nowrap;
+            .mbr-btn{
+                padding: 6px;
+                font-size: 1.5rem;
+                &:hover{
+                    background: #efefef;
+                }
+            }
+            .edit{
+                color: #5395bc;
+            }
+            .cancel{
+                color: #bc583f;
+            }
+            .save{
+                color: #689f92;
+            }
+
+        }
+    }
+    .pass-row{
+        .info-value{
+            padding: 0;
+
+            &.active{
+                border-color: transparent;
+                display: block;
+            }
+        }
+    }
+}
+.pass-row{
+    .hide-pass{
+        display: none;
+        font-family: $base-font-family!important;
+        line-height: 1.5rem!important;
+        &:before{
+            font-family: 'icomoon' !important;
+            margin-right: 5px;
+        }
+    }
+    &.active{
+        .info-value{
+            .user-pasword-wrap{
+                display: block!important;
+            }
+        }
+        .hide-pass{
+            display: inline-block;
+        }
+
+    }
+    .info-value{
+        .user-pasword-wrap{
+            display: none;
+        }
+        &.active{
+            border-color: transparent;
+        }
+        .user-pasword-wrap{
+            display: none;
+            input{
+                width: 100%;
+                border: 1px solid #d5d5d5;
+                padding: 5px;
+                outline: none;
+            }
+            .pass-strength-result{
+                display: none;
+                padding: 5px;
+                border: 1px solid transparent;
+                margin-top: -1px;
+            }
+
+            &.short{
+                input{
+                    border-color: #e35b5b;
+                }
+                .pass-strength-result{
+                    background-color: #f1adad;
+                    border-color: #e35b5b;
+                }
+            }
+            &.bad{
+                input{
+                    border-color: #f78b53;
+                }
+                .pass-strength-result{
+                    background-color: #fbc5a9;
+                    border-color: #f78b53;
+                }
+            }
+            &.good{
+                input{
+                    border-color: #ffc733;
+                }
+                .pass-strength-result{
+                    background-color: #ffe399;
+                    border-color: #ffc733;
+                }
+            }
+            &.strong{
+                input{
+                    border-color: #83c373;
+                }
+                .pass-strength-result{
+                    background-color: #c1e1b9;
+                    border-color: #83c373;
+                }
+            }
+        }
+
+    }
+    &.active{
+        .info-value{
+            .pass-strength-result{
+                display: block;
+            }
+        }
+
+    }
+}
+
+.contacts{
+    margin: 30px 0 20px;
+    .info-row:last-child{
+        border-bottom: none;
+    }
+}

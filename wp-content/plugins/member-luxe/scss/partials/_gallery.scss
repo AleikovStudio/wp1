@@ -1,0 +1,112 @@
+/* owl */
+.wpm-gallery-slider {
+    position: relative;
+}
+
+.owl-carousel .owl-item img {
+    box-sizing: content-box;
+    transform-style: flat!important;
+    transition: all .3s;
+}
+
+.gallery-item a {
+    display: block;
+    overflow: visible;
+}
+
+.gallery-item a:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -10px 0 0 -28px;
+    width: 56px;
+    height: 57px;
+    z-index: 100;
+    font-size: 3em;
+    color: #fff;
+    background: url('../images/image-zoom.png');
+    transition: all 0.3s;
+    line-height: 100px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.gallery-item:hover a:before {
+    visibility: visible;
+}
+
+.owl-nav {
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*z-index: 200;*/
+    /*top: 50%;*/
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    width: 30%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+}
+
+.owl-nav .owl-prev {
+    left: 0;
+}
+
+.owl-nav .owl-prev:before,
+.owl-nav .owl-next:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin: -18px 0 0 0;
+    width: 36px;
+    height: 34px;
+    background-image: url('../images/fancybox_sprite.png');
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+.owl-nav .owl-prev:before {
+    background-position: 0 -36px;
+    left: 30px;
+}
+
+.owl-nav .owl-prev:hover:before {
+    visibility: visible;
+}
+
+.owl-nav .owl-next {
+    right: 0;
+}
+
+.owl-nav .owl-next:before {
+    background-position: 0 -72px;
+    right: 30px;
+}
+
+.owl-nav .owl-next:hover:before {
+    visibility: visible;
+}
+
+.owl-dots {
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.owl-dots .owl-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background: #ccc;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.owl-dots .owl-dot.active, .owl-dots .owl-dot:hover {
+    background: #222222;
+}

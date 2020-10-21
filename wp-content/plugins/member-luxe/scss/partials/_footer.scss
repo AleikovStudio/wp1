@@ -1,0 +1,13 @@
+.footer-row {
+  .footer-user-agreement {
+    text-align: center;
+    a, a:visited {
+      color: #949494;
+      &:focus,
+      &:active,
+      &:hover {
+        color: #4a4a4a;
+      }
+    }
+  }
+}

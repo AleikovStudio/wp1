@@ -1,0 +1,104 @@
+.breadcrumbs-wrap {
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  .breadcrumbs {
+    flex: 1;
+    position: relative;
+    padding: 15px 0 10px;
+    color: #8e8e8e;
+    font-size: 1.6rem;
+    min-width: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: baseline;
+    .item {
+      color: #8e8e8e;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 400px;
+      margin: 0 10px 5px 0;
+      padding: 2px 0 0;
+      overflow: hidden;
+      vertical-align: baseline;
+      line-height: 2rem;
+      transition: none !important;
+      @include respond-to('xs') {
+        max-width: 200px;
+      }
+      @include respond-to('sm') {
+        max-width: 300px;
+      }
+      &:hover {
+        color: #000;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+      &.current {
+        span {
+          color: #4f4f4f;
+        }
+      }
+      .iconmoon,
+      .icon-file-text-o,
+      .icon-folder-open-o {
+        display: block;
+        float: left;
+        position: relative;
+        margin-right: 5px;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        vertical-align: baseline;
+        &:before {
+          display: block;
+          margin-left: 1px;
+          line-height: 2rem;
+        }
+      }
+      .icon-home {
+        font-size: 1.9rem;
+        line-height: 2rem;
+        display: block;
+        float: left;
+        position: relative;
+        &:before {
+          margin-top: -1px;
+        }
+      }
+      .icon-folder-open-o {
+        &:before {
+          margin-top: -1px;
+        }
+      }
+      .icon-file-text-o {
+        &:before {
+          margin-top: -3px;
+        }
+      }
+    }
+    .separator {
+      display: inline-block;
+      margin: 4px 10px 0 0;
+      line-height: 2rem;
+      vertical-align: top;
+    }
+
+    .search-query {
+      color: #000;
+    }
+
+  }
+  .course-progress-wrap {
+    width: 90px !important;
+    text-align: right;
+    padding: 15px 0;
+    cursor: default;
+    .progress-bar {
+      height: 5px;
+      background-color: #65bf49;
+    }
+  }
+}

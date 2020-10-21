@@ -1,0 +1,36 @@
+.search-result-row{
+    margin: 40px 0 0;
+    &.one-in-line{
+        .container{
+            max-width: 750px;
+            @include respond-to('xs'){
+                max-width: 370px;
+            }
+        }
+        .material-item{
+            .flex-wrap{
+                height: 220px;
+                @include respond-to('xs'){
+                    height: auto;
+                }
+                @include respond-to('md'){
+                    height: 220px;
+                }
+            }
+        }
+    }
+    .folder-name{
+        margin: 0 0 30px;
+        font-size: 2rem;
+        line-height: normal;
+        a{
+            color: #666666;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+    .materials{
+        margin-bottom: 0;
+    }
+}

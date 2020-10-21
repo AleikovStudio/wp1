@@ -1,0 +1,13 @@
+.login-tabs{
+    margin: 50px auto;
+    max-width: 460px;
+    .tab-content{
+        .tab-pane{
+            padding: 50px;
+            color: #8f8f8f;
+            @include respond-to('xs'){
+              padding: 30px;
+            }
+        }
+    }
+}
