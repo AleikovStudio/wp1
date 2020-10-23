@@ -1,4 +1,24 @@
-<?php
-
-
-echo 4+43;
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<header>
+	<div class="container">
+		header
+	</div>
+	<div class="container">
+		main
+	</div>
+	<footer>
+		<div class="container">
+			footer
+		</div>
+	</footer>
+</header>
+</body>
+</html>
